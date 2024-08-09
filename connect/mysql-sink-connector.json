@@ -1,0 +1,21 @@
+{
+    "name": "mysql-sink-connector",
+    "config": {
+      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "tasks.max": "1",
+      "topics": "my_topic",
+      "connection.url": "jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/kafka",
+      "connection.user": "2tQpfsQzrrg6wDM.root",
+      "connection.password": "IVvTfpI0f4CJtHBB",
+      "insert.mode": "insert",
+      "auto.create": "true",
+      "auto.evolve": "true",
+      "pk.mode": "none",
+      "pk.fields": "id",
+      "fields.whitelist": "id,name,age,city",
+      "table.name.format": "your_table",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter.schemas.enable": "false"
+    }
+  }
+  
